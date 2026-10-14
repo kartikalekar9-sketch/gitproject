@@ -1,0 +1,101 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+/* The universal selector resets default margins/padding and ensures accurate element sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    color: #111111;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. LAYOUT & CONTAINERS
+   ========================================================================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Flexbox utility for common multi-column structures */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ==========================================================================
+   4. UI COMPONENTS (Buttons, Cards, Forms)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #004499;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   5. RESPONSIVE DESIGN (Media Queries)
+   ========================================================================== */
+/* Adjust styles for tablets and mobile devices */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    .row {
+        flex-direction: column;
+    }
+}
